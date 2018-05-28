@@ -9,12 +9,16 @@
                 "test",
                 "<!(node -e \"require('nan')\")"
             ],
-            "sources": [
-                "src/exever_win.cpp"
-            ],
-            "libraries": [
-                "-lVersion"
-            ],
+	    "conditions": [
+		    ['OS=="win"', {
+			    "sources": [
+				    "src/exever_win.cpp"
+			    ],
+			    "libraries": [
+				    "-lVersion"
+			    ]
+		    }]
+	    ],
             'defines!': [
                 '_HAS_EXCEPTIONS=0'
             ],

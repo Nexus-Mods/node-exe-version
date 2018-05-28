@@ -1,6 +1,6 @@
 {
   "name": "exe-version",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Retrieve Version from an executable (windows)",
   "scripts": {
     "autogypi": "autogypi",
