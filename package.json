@@ -1,6 +1,6 @@
 {
   "name": "exe-version",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Retrieve Version from an executable (windows)",
   "scripts": {
     "autogypi": "autogypi",
@@ -9,7 +9,7 @@
   },
   "author": "",
   "license": "GPL-3.0",
-  "devDependencies": {
+  "dependencies": {
     "autogypi": "^0.2.2",
     "nan": "^2.8.0",
     "node-gyp": "^5.0.0"
