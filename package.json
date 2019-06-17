@@ -9,9 +9,9 @@
   },
   "author": "",
   "license": "GPL-3.0",
-  "dependencies": {
+  "devDependencies": {
     "autogypi": "^0.2.2",
     "nan": "^2.8.0",
-    "node-gyp": "^3.4.0"
+    "node-gyp": "^5.0.0"
   }
 }

@@ -1,4 +1,6 @@
-auto-top.gypi
-auto.gypi
-node_modules
 build
+node_modules
+auto.gypi
+auto-top.gypi
+
+src/.vscode
