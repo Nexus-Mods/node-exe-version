@@ -35,7 +35,10 @@ std::wstring string_cast(const char *source, size_t sourceLength = std::numeric_
 }
 
 NAN_METHOD(getVersion) {
-  String::Utf8Value executablePath(info[0]->ToString());
+  Local<Context> context = Nan::GetCurrentContext();
+  Isolate *isolate = context->GetIsolate();
+
+  String::Utf8Value executablePath(isolate, info[0]);
 
   DWORD handle;
   DWORD info_len = ::GetFileVersionInfoSizeW(string_cast(*executablePath).c_str(), &handle);
@@ -69,4 +72,8 @@ NAN_MODULE_INIT(Init) {
     GetFunction(New<v8::FunctionTemplate>(getVersion)).ToLocalChecked());
 }
 
+#if NODE_MAJOR_VERSION >= 10
+NAN_MODULE_WORKER_ENABLED(exeversion, Init)
+#else
 NODE_MODULE(exeversion, Init)
+#endif
