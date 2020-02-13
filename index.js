@@ -7,5 +7,8 @@ function getVersion(filePath) {
   return '';
 }
 
-module.exports.default = getVersion;
+module.exports = {
+  __esModule: true,
+  default = getVersion,
+}
 
