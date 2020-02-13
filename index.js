@@ -9,6 +9,6 @@ function getVersion(filePath) {
 
 module.exports = {
   __esModule: true,
-  default = getVersion,
+  default: getVersion,
 }
 
