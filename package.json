@@ -1,17 +1,12 @@
 {
   "name": "exe-version",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Retrieve Version from an executable (windows)",
   "scripts": {
-    "autogypi": "autogypi",
-    "node-gyp": "node-gyp",
-    "install": "npm run autogypi && node-gyp configure build"
   },
   "author": "",
   "license": "GPL-3.0",
   "dependencies": {
-    "autogypi": "^0.2.2",
-    "nan": "^2.14.0",
-    "node-gyp": "^6.1.0"
+    "winapi-bindings": "Nexus-Mods/node-winapi-bindings"
   }
 }
