@@ -1,9 +1,8 @@
 {
   "name": "exe-version",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Retrieve Version from an executable (windows)",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "",
   "license": "GPL-3.0",
   "dependencies": {
