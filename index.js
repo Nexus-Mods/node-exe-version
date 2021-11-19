@@ -10,8 +10,18 @@ function getVersion(filePath) {
   return '';
 }
 
+function getProductVersion(filePath) {
+  if (process.platform === 'win32') {
+    const v = winapi.GetFileVersionInfo(filePath).productVersion;
+    return `${v[0]}.${v[1]}.${v[2]}.${v[3]}`;
+  }
+  return '';
+}
+
 module.exports = {
   __esModule: true,
   default: getVersion,
+  getFileVersion: getVersion,
+  getProductVersion,
 }
 
